@@ -41,3 +41,26 @@ func sum(total: Int) -> Int {
 }
 
 print(sum(40))
+
+print(sum)
+
+
+//Optionals
+var myString:String?
+
+myString = "Hello, Swift!"
+
+if myString != nil {
+    print(myString)
+}else{
+    print("myString has nil value")
+}
+
+//Forced unwrapping
+if myString != nil {
+    print(myString!)
+}else{
+    print("myString has nil value")
+}
+
+
