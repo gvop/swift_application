@@ -25,32 +25,29 @@
                                     <constraint firstAttribute="height" constant="170" id="SRw-Ye-Bfk"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back_original_comp_small" translatesAutoresizingMaskIntoConstraints="NO" id="HAu-yI-CwG" userLabel="SecondCard">
-                                <rect key="frame" x="240" y="215" width="120" height="170"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="s6u-CH-su8"/>
-                                    <constraint firstAttribute="height" constant="170" id="xqA-6j-mZF"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back_original_comp_small" translatesAutoresizingMaskIntoConstraints="NO" id="oyE-GW-8qs" userLabel="ThirdCard">
-                                <rect key="frame" x="430" y="215" width="120" height="170"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="G6m-bZ-4AM"/>
-                                    <constraint firstAttribute="height" constant="170" id="PMS-1j-7k8"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HAu-yI-CwG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IQW-JR-yN3"/>
-                            <constraint firstItem="TdW-2Y-q9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="J14-gj-X99"/>
                             <constraint firstItem="TdW-2Y-q9j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LUR-w2-Kqc"/>
-                            <constraint firstItem="oyE-GW-8qs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Thy-bo-kMT"/>
-                            <constraint firstItem="HAu-yI-CwG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UPL-TR-pbI"/>
-                            <constraint firstAttribute="trailing" secondItem="oyE-GW-8qs" secondAttribute="trailing" constant="50" id="pYs-7f-IaY"/>
+                            <constraint firstItem="TdW-2Y-q9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="gIk-W7-qz8"/>
+                            <constraint firstItem="TdW-2Y-q9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="200" id="oW9-sB-alP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gIk-W7-qz8"/>
+                                <exclude reference="oW9-sB-alP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="oW9-sB-alP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="gIk-W7-qz8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
