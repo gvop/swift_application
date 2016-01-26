@@ -19,13 +19,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.playRoundButtun.backgroundColor = UIColor.blackColor()
+        self.playRoundButtun.setTitle("Play", forState: UIControlState.Normal)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 
