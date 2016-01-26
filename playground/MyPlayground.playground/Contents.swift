@@ -76,6 +76,10 @@ class Person {
     func sayHello() {
         print(Name)
     }
+    
+    func Walk(){
+        print("I'm walking")
+    }
 }
 
 var firstPerson = Person()
@@ -86,6 +90,27 @@ firstPerson.Name
 
 var secondPerson = Person()
 secondPerson.Name = "Chris"
+
+//SUBCLASSES
+
+var thirdPerson = Person()
+thirdPerson.Name = "Rita"
+thirdPerson.Walk()
+
+//Has all the things from Person
+class Superhuman : Person {
+    func ReadMind() {
+        print("I can read your mind")
+    }
+}
+
+var subPerson = Superhuman()
+subPerson.Name
+subPerson.Walk()
+subPerson.ReadMind()
+
+
+
 
 
 
