@@ -64,3 +64,24 @@ if myString != nil {
 }
 
 
+//FIRST CLASS
+class Person {
+    init () {
+        print("New Person initialized")
+    }
+}
+
+var g = Person()
+
+g
+
+
+
+
+
+
+
+
+
+
+
