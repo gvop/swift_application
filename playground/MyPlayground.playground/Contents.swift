@@ -102,12 +102,19 @@ class Superhuman : Person {
     func ReadMind() {
         print("I can read your mind")
     }
+    
+    override func Walk(){
+        print("I'm going to override")
+        super.Walk()
+    }
 }
 
 var subPerson = Superhuman()
 subPerson.Name
 subPerson.Walk()
 subPerson.ReadMind()
+subPerson.Walk()
+subPerson.Walk()
 
 
 
