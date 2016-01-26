@@ -66,14 +66,27 @@ if myString != nil {
 
 //FIRST CLASS
 class Person {
+    
+    var Name:String = "Guus"
+    
     init () {
-        print("New Person initialized")
+        self.sayHello()
+    }
+    
+    func sayHello() {
+        print(Name)
     }
 }
 
-var g = Person()
+var firstPerson = Person()
 
-g
+firstPerson.Name
+firstPerson.Name = "Tim"
+firstPerson.Name
+
+var secondPerson = Person()
+secondPerson.Name = "Chris"
+
 
 
 
