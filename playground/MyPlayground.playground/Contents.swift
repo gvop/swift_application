@@ -136,6 +136,11 @@ class Guus {
         self.Age += ageToIncrease
         return self.Age
     }
+    
+    class func AgeReturn() -> Int {
+        return 50
+    }
+    
 }
 
 var Christopher = Guus()
@@ -144,7 +149,7 @@ Christopher.Name
 
 var newAge = Christopher.IncreaseAge(20)
 
-
+Guus.AgeReturn()
 
 
 

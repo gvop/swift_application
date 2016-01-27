@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.playRoundButtun.backgroundColor = UIColor.blackColor()
+        
         self.playRoundButtun.setTitle("Play", forState: UIControlState.Normal)
         
     }
@@ -30,5 +30,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pressButton(sender: UIButton) {
+       self.playRoundButtun.backgroundColor = UIColor.blackColor() 
+    }
 }
 
