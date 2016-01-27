@@ -16,22 +16,32 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playRoundButtun: UIButton!
     
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        self.playRoundButtun.setTitle("Play", forState: UIControlState.Normal)
-        
+        count = 0
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+    var count: Int = 0 {
+        didSet {
+            messageLabel.text = "\(count)"
+        }
+    }
+    
     @IBAction func pressButton(sender: UIButton) {
-       self.playRoundButtun.backgroundColor = UIColor.blackColor() 
+        if (count < 20){
+          count += 1
+        } else {
+           messageLabel.text = "Now it's enough!"
+        }
     }
 }
+
 
