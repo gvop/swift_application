@@ -118,11 +118,31 @@ subPerson.Walk()
 
 
 
+class Guus {
+    var Name:String
+    var Age:Int
+    
+    init(){
+        self.Name = "Initial Name"
+        self.Age = 20
+    }
+    
+    func UpdateName(name:String, age:Int) {
+        self.Name = name
+        self.Age  = age
+    }
+    
+    func IncreaseAge(ageToIncrease:Int) -> Int {
+        self.Age += ageToIncrease
+        return self.Age
+    }
+}
 
+var Christopher = Guus()
+Christopher.UpdateName("Olda", age: 12 )
+Christopher.Name
 
-
-
-
+var newAge = Christopher.IncreaseAge(20)
 
 
 
