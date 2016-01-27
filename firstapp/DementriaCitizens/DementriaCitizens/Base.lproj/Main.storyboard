@@ -150,6 +150,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="firstButtonClick:" destination="Skw-hZ-KLk" eventType="touchUpInside" id="akw-qf-xp5"/>
                                     <segue destination="YWy-QH-VyU" kind="show" id="edS-Yf-ilU"/>
                                 </connections>
                             </button>
@@ -181,6 +182,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="secondButtonClick:" destination="Skw-hZ-KLk" eventType="touchUpInside" id="aaI-aE-8b9"/>
                                     <segue destination="YWy-QH-VyU" kind="show" id="hGs-DS-scU"/>
                                 </connections>
                             </button>
@@ -212,6 +214,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="thirdButtonClick:" destination="Skw-hZ-KLk" eventType="touchUpInside" id="D0K-zz-kUs"/>
                                     <segue destination="YWy-QH-VyU" kind="show" id="y1w-2s-5R2"/>
                                 </connections>
                             </button>
@@ -271,6 +274,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="firstButton" destination="19p-GI-5CM" id="I2s-qe-Cli"/>
+                        <outlet property="secondButton" destination="o2O-2z-Yqj" id="n7c-LN-qUl"/>
+                        <outlet property="thirdButton" destination="0k1-14-tNp" id="6GW-20-ldp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cic-d3-c60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,31 +301,49 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmR-RB-OMg">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="C6S-Ds-5PN" firstAttribute="top" secondItem="dyy-zu-wcL" secondAttribute="topMargin" constant="150" id="3SK-jM-4vh"/>
+                            <constraint firstItem="C6S-Ds-5PN" firstAttribute="top" secondItem="VmR-RB-OMg" secondAttribute="bottom" constant="-50" id="HNQ-sP-eV2"/>
+                            <constraint firstItem="VmR-RB-OMg" firstAttribute="centerX" secondItem="dyy-zu-wcL" secondAttribute="centerX" id="LWs-bE-fTH"/>
                             <constraint firstItem="C6S-Ds-5PN" firstAttribute="centerX" secondItem="dyy-zu-wcL" secondAttribute="centerX" id="XBS-S1-Oau"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="C6S-Ds-5PN"/>
+                                <exclude reference="VmR-RB-OMg"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="LWs-bE-fTH"/>
                                 <exclude reference="3SK-jM-4vh"/>
+                                <exclude reference="HNQ-sP-eV2"/>
                                 <exclude reference="XBS-S1-Oau"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="C6S-Ds-5PN"/>
+                                <include reference="VmR-RB-OMg"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="LWs-bE-fTH"/>
                                 <include reference="3SK-jM-4vh"/>
+                                <include reference="HNQ-sP-eV2"/>
                                 <include reference="XBS-S1-Oau"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="ReviewText" destination="VmR-RB-OMg" id="f2W-V9-xyX"/>
+                        <outlet property="reviewText" destination="VmR-RB-OMg" id="rzR-5s-ZnC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ns-3J-jEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

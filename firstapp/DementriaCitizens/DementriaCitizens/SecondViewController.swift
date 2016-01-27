@@ -10,26 +10,35 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
+    @IBOutlet weak var thirdButton: UIButton!
+    
+    var exportText:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func firstButtonClick(sender: AnyObject) {
+        exportText = firstButton.titleLabel!.text!
     }
-    */
 
+    @IBAction func secondButtonClick(sender: AnyObject) {
+        exportText = secondButton.titleLabel!.text!
+    }
+    
+    @IBAction func thirdButtonClick(sender: AnyObject) {
+        exportText = thirdButton.titleLabel!.text!
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let thirdVC:ThirdViewController = segue.destinationViewController as! ThirdViewController
+        thirdVC.recievedData = exportText
+    }
 }
