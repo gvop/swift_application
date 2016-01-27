@@ -11,13 +11,16 @@ import UIKit
 class ThirdViewController: UIViewController {
 
     @IBOutlet weak var reviewText: UILabel!
+    @IBOutlet weak var nameLable: UILabel!
     
     var recievedData:String = ""
+    var recievedName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         reviewText.text = recievedData
+        nameLable.text  = recievedName
     }
 
     override func didReceiveMemoryWarning() {

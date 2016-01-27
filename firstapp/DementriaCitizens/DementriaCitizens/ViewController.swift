@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var joinButton: UIButton!
     
+     var exportText:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         joinButton.layer.cornerRadius = 5
@@ -22,6 +24,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
 }
 
